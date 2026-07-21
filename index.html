@@ -1,80 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QSApp Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QSApp &mdash; Support &amp; Privacy</title>
   <style>
+    :root {
+      --navy: #0B004C;
+      --amber: #F5A623;
+      --ink: #1c1c28;
+      --muted: #5c5c6e;
+      --line: #e6e6ee;
+      --bg: #f7f7fb;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #333;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
       line-height: 1.6;
     }
-    h1 { color: #1c2535; }
-    h2 { color: #1c2535; margin-top: 32px; }
-    p { margin-bottom: 16px; }
-    a { color: #f39c12; }
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: 0.5px; }
+    header p { margin: 0; color: #c9c6e6; font-size: 16px; }
+    .accent { color: var(--amber); }
+    main { max-width: 780px; margin: 0 auto; padding: 32px 24px 64px; }
+    section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 21px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--amber);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    h3 { margin: 22px 0 6px; font-size: 16px; color: var(--navy); }
+    p, li { color: var(--ink); font-size: 15.5px; }
+    a { color: var(--navy); font-weight: 600; }
+    .contact-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .muted { color: var(--muted); font-size: 14px; }
+    ul { padding-left: 20px; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px; }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated: 6 July 2026</strong></p>
+  <header>
+    <h1>QS<span class="accent">App</span></h1>
+    <p>Support &amp; Privacy</p>
+  </header>
 
-  <p>This Privacy Policy explains how QSApp ("we", "us", or "our") collects, uses, and protects your information when you use our mobile application.</p>
+  <main>
+    <!-- ============ SUPPORT ============ -->
+    <section>
+      <h2>Support</h2>
+      <p>QSApp helps builders and quantity surveyors turn construction drawings into priced estimates. If you have a question, hit a problem, or want to give feedback, we're happy to help.</p>
+      <h3>Contact us</h3>
+      <p>Email us and we'll normally reply within 2 working days:</p>
+      <p><a class="contact-btn" href="mailto:jackletch.dev@gmail.com?subject=QSApp%20Support">Email QSApp Support</a></p>
+      <p class="muted">jackletch.dev@gmail.com</p>
+    </section>
 
-  <h2>1. Information We Collect</h2>
-  <p>We collect the following information when you use QSApp:</p>
-  <ul>
-    <li><strong>Account information:</strong> email address and password when you register.</li>
-    <li><strong>Project data:</strong> drawings, scope of works, and cost estimates you create within the app.</li>
-    <li><strong>Usage data:</strong> API usage logs to monitor service performance and costs.</li>
-    <li><strong>Address/postcode data:</strong> used solely to determine the regional pricing factor for your estimate. Not stored beyond the current session.</li>
-  </ul>
+    <!-- ============ FAQ ============ -->
+    <section>
+      <h2>Frequently Asked Questions</h2>
 
-  <h2>2. How We Use Your Information</h2>
-  <ul>
-    <li>To provide and operate the QSApp service.</li>
-    <li>To generate cost estimates using AI (Anthropic Claude API). Uploaded drawings and scope text are sent to Anthropic's API for processing. See <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a> for details on how they handle data.</li>
-    <li>To store your projects securely so you can access them across devices.</li>
-    <li>To monitor usage and maintain service reliability.</li>
-  </ul>
+      <h3>How do I create an estimate?</h3>
+      <p>Start a new project, upload your PDF drawings (or take a photo of them), and add any notes about the scope of works. QSApp reads the drawings, extracts the scope, and lets you confirm the items before it prices the job.</p>
 
-  <h2>3. Data Storage</h2>
-  <p>Your data is stored securely using Supabase, a cloud database platform. Data is stored on servers within the European Union. See <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a> for further information.</p>
+      <h3>How is my estimate priced?</h3>
+      <p>Pricing uses a built-in rate book and your own profit and material margins, which you set in your Business Profile. You stay in control &mdash; you can review and edit every item before finalising.</p>
 
-  <h2>4. Data Sharing</h2>
-  <p>We do not sell your data. We share data only with the third-party services required to operate the app:</p>
-  <ul>
-    <li><strong>Anthropic</strong> — for AI-powered scope extraction from uploaded drawings.</li>
-    <li><strong>Supabase</strong> — for secure data storage and authentication.</li>
-  </ul>
+      <h3>How do I delete my account?</h3>
+      <p>In the app, go to <strong>Menu &rarr; Business Profile</strong>, scroll to the <strong>Danger Zone</strong> at the bottom, and tap <strong>Delete Account</strong>. After you confirm, your account and all associated data (projects, business profile, and settings) are permanently deleted. This cannot be undone. You can also email us to request deletion.</p>
 
-  <h2>5. Data Retention</h2>
-  <p>Your account and project data is retained for as long as your account is active. You can request deletion of your data at any time by contacting us.</p>
+      <h3>I forgot my password.</h3>
+      <p>Email us at <a href="mailto:jackletch.dev@gmail.com?subject=QSApp%20Password%20Reset">jackletch.dev@gmail.com</a> and we'll help you reset it.</p>
+    </section>
 
-  <h2>6. Your Rights</h2>
-  <p>You have the right to:</p>
-  <ul>
-    <li>Access the personal data we hold about you.</li>
-    <li>Request correction of inaccurate data.</li>
-    <li>Request deletion of your account and data.</li>
-  </ul>
-  <p>To exercise these rights, contact us at the email below.</p>
+    <!-- ============ PRIVACY POLICY ============ -->
+    <section>
+      <h2>Privacy Policy</h2>
+      <p><strong>Last updated: 21 July 2026</strong></p>
 
-  <h2>7. Security</h2>
-  <p>We take reasonable steps to protect your data. All data is transmitted over encrypted HTTPS connections. Passwords are hashed and never stored in plain text.</p>
+      <p>This Privacy Policy explains how QSApp ("we", "us", or "our") collects, uses, and protects your information when you use our mobile application.</p>
 
-  <h2>8. Children's Privacy</h2>
-  <p>QSApp is not intended for use by anyone under the age of 18. We do not knowingly collect data from children.</p>
+      <h3>1. Information We Collect</h3>
+      <p>We collect the following information when you use QSApp:</p>
+      <ul>
+        <li><strong>Account information:</strong> email address and password when you register.</li>
+        <li><strong>Project data:</strong> drawings, scope of works, and cost estimates you create within the app.</li>
+        <li><strong>Usage data:</strong> API usage logs to monitor service performance and costs.</li>
+        <li><strong>Address/postcode data:</strong> used solely to determine the regional pricing factor for your estimate. Not stored beyond the current session.</li>
+      </ul>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>To provide and operate the QSApp service.</li>
+        <li>To generate cost estimates using AI (Anthropic Claude API). Uploaded drawings and scope text are sent to Anthropic's API for processing. See <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a> for details on how they handle data.</li>
+        <li>To store your projects securely so you can access them across devices.</li>
+        <li>To monitor usage and maintain service reliability.</li>
+      </ul>
 
-  <h2>10. Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-  <a href="mailto:jackletch.dev@gmail.com">jackletch.dev@gmail.com</a></p>
+      <h3>3. Camera and Photo Access</h3>
+      <p>QSApp only accesses your camera or photo library when you choose to add a drawing, plan, or company logo. Images are used solely to build your estimate and are not used for any other purpose.</p>
+
+      <h3>4. Data Storage</h3>
+      <p>Your data is stored securely using Supabase, a cloud database platform. Data is stored on servers within the European Union. See <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy</a> for further information.</p>
+
+      <h3>5. Data Sharing</h3>
+      <p>We do not sell your data. We share data only with the third-party services required to operate the app:</p>
+      <ul>
+        <li><strong>Anthropic</strong> &mdash; for AI-powered scope extraction from uploaded drawings.</li>
+        <li><strong>Supabase</strong> &mdash; for secure data storage and authentication.</li>
+      </ul>
+
+      <h3>6. Data Retention and Deletion</h3>
+      <p>Your account and project data is retained for as long as your account is active. You can permanently delete your account and all associated data at any time directly in the app (Business Profile &rarr; Danger Zone &rarr; Delete Account), or by contacting us at the email below.</p>
+
+      <h3>7. Your Rights</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access the personal data we hold about you.</li>
+        <li>Request correction of inaccurate data.</li>
+        <li>Delete your account and data (see section 6).</li>
+      </ul>
+      <p>To exercise these rights, contact us at the email below.</p>
+
+      <h3>8. Security</h3>
+      <p>We take reasonable steps to protect your data. All data is transmitted over encrypted HTTPS connections. Passwords are hashed and never stored in plain text.</p>
+
+      <h3>9. Children's Privacy</h3>
+      <p>QSApp is not intended for use by anyone under the age of 18. We do not knowingly collect data from children.</p>
+
+      <h3>10. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+      <h3>11. Contact</h3>
+      <p>If you have any questions about this Privacy Policy, please contact us at:<br>
+      <a href="mailto:jackletch.dev@gmail.com">jackletch.dev@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 QSApp. All rights reserved.
+  </footer>
 </body>
 </html>
